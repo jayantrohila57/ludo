@@ -2,28 +2,52 @@ import React from "react";
 
 const Ludo = () => {
   return (
-    <div className="md:h-screen flex flex-col md:flex-row sm:flex-col">
-      <div className="flex-1 bg-neutral-950"></div>
-      <div className="md:w-[100vh] mx-auto sm:w-[100vw] w-[100vw] md:h-screen sm:h-[100vw] h-[100vw]  bg-neutral-950 ">
-        <main className="h-full w-full">
+    <div className="md:h-screen flex flex-col md:flex-row sm:flex-col text-neutral-950 justify-start">
+      <div className=" bg-neutral-950">
+        <div className="w-[100vw] sm:w-[100vw] md:w-[10vw] lg:w-[15vw] h-[20vw] p-0.5 md:px-1 sm:h-[10vw] md:h-[100vh] grid grid-cols-5 grid-rows-1 md:grid-cols-1 sm:grid-cols-5 sm:grid-rows-1 gap-0.5 md:grid-rows-5">
+          {/* player 1 */}
+          <div className="h-full w-full col-span-2 row-span-1 md:col-span-1 md:row-span-2  bg-yellow-500 rounded-sm sm:rounded-md md:rounded-lg "></div>
+          <div className="h-full w-full col-span-1 row-span-1 bg-neutral-900 rounded-sm sm:rounded-md md:rounded-lg "></div>
+          {/* player 2 */}
+          <div className="h-full w-full col-span-2 row-span-1 md:col-span-1 md:row-span-2  bg-blue-500  rounded-sm sm:rounded-md md:rounded-lg"></div>
+        </div>
+      </div>
+      <div className="sm:w-[100vw] w-[100vw] md:w-[100vh]  md:h-[100vh] sm:h-[100vw] h-[100vw]  bg-neutral-950 ">
+        <main className="h-full w-full p-0.5 md:px-0">
           <div className="h-full w-full gap-0.5 grid grid-cols-5 grid-rows-5">
             {/* 1 */}
             <div
               id="block-one"
-              className=" col-span-2 row-span-2 h-full w-full"
+              className=" col-span-2 row-span-2 bg-orange-200  p-2 m:p-3 md:p-4 md:rounded-lg sm:rounded-md rounded-sm  h-full w-full"
             >
-              <div className="grid grid-cols-4 grid-rows-4 h-full gap-0.5 w-full ">
-                <div className="h-full w-full col-span-2 rounded-lg  row-span-2 bg-yellow-500 flex justify-center items-center">
-                  <div className="rounded-lg h-[60%] w-[60%] bg-neutral-200 border-2 border-neutral-900"></div>
+              <div className="grid grid-cols-4 grid-rows-4 h-full w-full ">
+                <div className="h-full w-full rounded-tl-xl rounded-br-xl md:rounded-tl-3xl md:rounded-br-3xl col-span-2    row-span-2 bg-yellow-500 flex justify-center items-center">
+                  <div className="rounded-3xl  h-[70%] w-[70%] flex justify-center items-center bg-orange-200 border border-neutral-900">
+                    <div className="text-3xl sm:text-5xl md:text-5xl font-extrabold">
+                      1
+                    </div>
+                  </div>
                 </div>
-                <div className="h-full w-full col-span-2 rounded-lg row-span-2 bg-yellow-500 flex justify-center items-center">
-                  <div className="rounded-lg h-[60%] w-[60%] bg-neutral-200 border-2 border-neutral-900"></div>
+                <div className="h-full w-full rounded-tr-xl rounded-bl-xl md:rounded-tr-3xl md:rounded-bl-3xl col-span-2   row-span-2 bg-yellow-500 flex justify-center items-center">
+                  <div className="rounded-3xl  h-[70%] w-[70%] flex justify-center items-center bg-orange-200 border border-neutral-900">
+                    <div className="text-3xl sm:text-5xl md:text-5xl font-extrabold">
+                      2
+                    </div>
+                  </div>
                 </div>
-                <div className="h-full w-full col-span-2 rounded-lg row-span-2 bg-yellow-500 flex justify-center items-center">
-                  <div className="rounded-lg h-[60%] w-[60%] bg-neutral-200 border-2 border-neutral-900"></div>
+                <div className="h-full w-full rounded-bl-xl rounded-tr-xl md:rounded-bl-3xl md:rounded-tr-3xl col-span-2   row-span-2 bg-yellow-500 flex justify-center items-center">
+                  <div className="rounded-3xl  h-[70%] w-[70%] flex justify-center items-center bg-orange-200 border border-neutral-900">
+                    <div className="text-3xl sm:text-5xl md:text-5xl font-extrabold">
+                      3
+                    </div>
+                  </div>
                 </div>
-                <div className="h-full w-full col-span-2 rounded-lg row-span-2 bg-yellow-500 flex justify-center items-center">
-                  <div className="rounded-lg h-[60%] w-[60%] bg-neutral-200 border-2 border-neutral-900"></div>
+                <div className="h-full w-full rounded-br-xl rounded-tl-xl md:rounded-br-3xl md:rounded-tl-3xl col-span-2   row-span-2 bg-yellow-500 flex justify-center items-center">
+                  <div className="rounded-3xl  h-[70%] w-[70%] flex justify-center items-center bg-orange-200 border border-neutral-900">
+                    <div className="text-3xl sm:text-5xl md:text-5xl font-extrabold">
+                      4
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -32,8 +56,10 @@ const Ludo = () => {
               <div className="grid  grid-cols-1 grid-rows-2 h-full gap-0.5 w-full">
                 <div className="h-full w-full col-span-1 row-span-1   ">
                   <div className="grid grid-cols-3 grid-rows-3 h-full w-full gap-0.5  ">
-                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 md:rounded-full scale-95 sm:rounded-md rounded-sm flex justify-center items-center ">
+                      <div className="h-12 w-12 rounded-full border-2 flex justify-center items-center border-black shadow-2xl bg-blue-500 text-3xl sm:text-3xl md:text-3xl font-extrabold"></div>
+                    </div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -46,10 +72,10 @@ const Ludo = () => {
                         />
                       </svg>
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-green-500 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-green-500 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-green-500 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-green-500 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -59,7 +85,7 @@ const Ludo = () => {
                         <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
                       </svg>
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-yellow-500 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-yellow-500 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -72,15 +98,15 @@ const Ludo = () => {
                         />
                       </svg>
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-green-500 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 rounded-lg"></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-green-500 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
                   </div>
                 </div>
                 <div className="h-full w-full col-span-1 row-span-1 ">
                   <div className="grid grid-cols-3 grid-rows-3 h-full w-full gap-0.5 ">
-                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-green-500 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-green-500 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -93,7 +119,7 @@ const Ludo = () => {
                         />
                       </svg>
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -106,11 +132,11 @@ const Ludo = () => {
                         />
                       </svg>
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-green-500 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-green-500 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-green-500 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-green-500 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -130,20 +156,36 @@ const Ludo = () => {
             {/* 3 */}
             <div
               id="block-one"
-              className=" col-span-2 row-span-2 h-full w-full"
+              className=" col-span-2 row-span-2 bg-green-200  p-2 m:p-3 md:p-4 md:rounded-lg sm:rounded-md rounded-sm  h-full w-full"
             >
-              <div className="grid grid-cols-4 grid-rows-4 h-full gap-0.5 w-full ">
-                <div className="h-full w-full col-span-2 rounded-lg  row-span-2 bg-green-500 flex justify-center items-center">
-                  <div className="rounded-lg h-[60%] w-[60%] bg-neutral-200 border-2 border-neutral-900"></div>
+              <div className="grid grid-cols-4 grid-rows-4 h-full w-full ">
+                <div className="h-full w-full rounded-tl-xl rounded-br-xl md:rounded-tl-3xl md:rounded-br-3xl col-span-2    row-span-2 bg-green-500 flex justify-center items-center">
+                  <div className="rounded-3xl  h-[70%] w-[70%] flex justify-center items-center bg-green-200 border border-neutral-900">
+                    <div className="text-3xl sm:text-5xl md:text-5xl font-extrabold">
+                      1
+                    </div>
+                  </div>
                 </div>
-                <div className="h-full w-full col-span-2 rounded-lg row-span-2 bg-green-500 flex justify-center items-center">
-                  <div className="rounded-lg h-[60%] w-[60%] bg-neutral-200 border-2 border-neutral-900"></div>
+                <div className="h-full w-full rounded-tr-xl rounded-bl-xl md:rounded-tr-3xl md:rounded-bl-3xl col-span-2   row-span-2 bg-green-500 flex justify-center items-center">
+                  <div className="rounded-3xl  h-[70%] w-[70%] flex justify-center items-center bg-green-200 border border-neutral-900">
+                    <div className="text-3xl sm:text-5xl md:text-5xl font-extrabold">
+                      2
+                    </div>
+                  </div>
                 </div>
-                <div className="h-full w-full col-span-2 rounded-lg row-span-2 bg-green-500 flex justify-center items-center">
-                  <div className="rounded-lg h-[60%] w-[60%] bg-neutral-200 border-2 border-neutral-900"></div>
+                <div className="h-full w-full rounded-bl-xl rounded-tr-xl md:rounded-bl-3xl md:rounded-tr-3xl col-span-2   row-span-2 bg-green-500 flex justify-center items-center">
+                  <div className="rounded-3xl  h-[70%] w-[70%] flex justify-center items-center bg-green-200 border border-neutral-900">
+                    <div className="text-3xl sm:text-5xl md:text-5xl font-extrabold">
+                      3
+                    </div>
+                  </div>
                 </div>
-                <div className="h-full w-full col-span-2 rounded-lg row-span-2 bg-green-500 flex justify-center items-center">
-                  <div className="rounded-lg h-[60%] w-[60%] bg-neutral-200 border-2 border-neutral-900"></div>
+                <div className="h-full w-full rounded-br-xl rounded-tl-xl md:rounded-br-3xl md:rounded-tl-3xl col-span-2   row-span-2 bg-green-500 flex justify-center items-center">
+                  <div className="rounded-3xl  h-[70%] w-[70%] flex justify-center items-center bg-green-200 border border-neutral-900">
+                    <div className="text-3xl sm:text-5xl md:text-5xl font-extrabold">
+                      4
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -152,8 +194,8 @@ const Ludo = () => {
               <div className="grid    grid-cols-2 grid-rows-1 h-full gap-0.5 w-full">
                 <div className="h-full w-full col-span-1 row-span-1    ">
                   <div className="grid grid-cols-3 grid-rows-3 h-full w-full gap-0.5  ">
-                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-yellow-500 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-yellow-500 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -163,8 +205,8 @@ const Ludo = () => {
                         <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
                       </svg>
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -177,11 +219,11 @@ const Ludo = () => {
                         />
                       </svg>
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-yellow-500 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-yellow-500 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-500 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-yellow-500 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-yellow-500 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-500 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -198,7 +240,7 @@ const Ludo = () => {
                 </div>
                 <div className="h-full w-full col-span-1 row-span-1  ">
                   <div className="grid grid-cols-3 grid-rows-3 h-full w-full gap-0.5 ">
-                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -211,8 +253,8 @@ const Ludo = () => {
                         />
                       </svg>
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-orange-200 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -225,11 +267,11 @@ const Ludo = () => {
                         />
                       </svg>
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-yellow-500 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-yellow-500 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-yellow-500 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-yellow-500 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-yellow-500 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-yellow-500 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -242,7 +284,7 @@ const Ludo = () => {
                         />
                       </svg>
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 rounded-lg"></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
                   </div>
                 </div>
               </div>
@@ -253,8 +295,8 @@ const Ludo = () => {
               className=" col-span-1 row-span-1 h-full w-full"
             >
               <div className="h-full w-full">
-                <div className="grid grid-cols-3 p-0.5 bg-neutral-200 rounded-lg grid-rows-3 h-full  w-full gap-0.5  ">
-                  <div className="col-span-1 row-span-1 h-full w-full bg-neutral-200 rounded-lg flex justify-center items-center">
+                <div className="grid grid-cols-3 p-0.5 bg-neutral-200 md:rounded-lg sm:rounded-md rounded-sm   grid-rows-3 h-full  w-full gap-0.5  ">
+                  <div className="col-span-1 row-span-1 h-full w-full bg-neutral-200 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                     <svg
                       viewBox="0 0 24 24"
                       fill="currentColor"
@@ -276,7 +318,7 @@ const Ludo = () => {
                       />
                     </svg>
                   </div>
-                  <div className="col-span-1 row-span-1 h-full w-full bg-neutral-200 rounded-lg flex justify-center items-center">
+                  <div className="col-span-1 row-span-1 h-full w-full bg-neutral-200 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                     <svg
                       viewBox="0 0 24 24"
                       fill="currentColor"
@@ -298,7 +340,7 @@ const Ludo = () => {
                       />
                     </svg>
                   </div>
-                  <div className="col-span-1 row-span-1 h-full w-full bg-neutral-200  flex justify-center items-center rounded-lg">
+                  <div className="col-span-1 row-span-1 h-full w-full bg-neutral-200  flex justify-center items-center md:rounded-lg sm:rounded-md rounded-sm  ">
                     <svg
                       viewBox="0 0 24 24"
                       fill="currentColor"
@@ -320,7 +362,7 @@ const Ludo = () => {
                       />
                     </svg>
                   </div>
-                  <div className="col-span-1 row-span-1 h-full w-full bg-neutral-200 rounded-lg flex justify-center items-center">
+                  <div className="col-span-1 row-span-1 h-full w-full bg-neutral-200 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                     <svg
                       viewBox="0 0 24 24"
                       fill="currentColor"
@@ -342,7 +384,7 @@ const Ludo = () => {
                       />
                     </svg>
                   </div>
-                  <div className="col-span-1 row-span-1 h-full w-full bg-neutral-200 rounded-lg flex justify-center items-center">
+                  <div className="col-span-1 row-span-1 h-full w-full bg-neutral-200 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                     <svg
                       viewBox="0 0 24 24"
                       fill="currentColor"
@@ -363,9 +405,9 @@ const Ludo = () => {
               <div className="grid    grid-cols-2 grid-rows-1 h-full gap-0.5 w-full">
                 <div className="h-full w-full col-span-1 row-span-1   ">
                   <div className="grid grid-cols-3 grid-rows-3 h-full w-full gap-0.5  ">
-                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 rounded-lg flex justify-center items-center">
-                    <svg
+                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
+                      <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
                         className="w-10 h-10 -rotate-90"
@@ -376,13 +418,12 @@ const Ludo = () => {
                           clipRule="evenodd"
                         />
                       </svg>
-                 
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-red-500 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-red-500 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-red-500 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-red-500 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-red-500 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-red-500 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -395,8 +436,8 @@ const Ludo = () => {
                         />
                       </svg>
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -413,7 +454,7 @@ const Ludo = () => {
                 </div>
                 <div className="h-full w-full col-span-1 row-span-1  ">
                   <div className="grid grid-cols-3 grid-rows-3 h-full w-full gap-0.5 ">
-                    <div className="col-span-1 row-span-1 h-full w-full bg-green-500 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-green-500 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -426,11 +467,11 @@ const Ludo = () => {
                         />
                       </svg>
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-red-500 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-red-500 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-green-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-red-500 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-red-500 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -443,8 +484,8 @@ const Ludo = () => {
                         />
                       </svg>
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-red-500 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-red-500 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -454,7 +495,7 @@ const Ludo = () => {
                         <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
                       </svg>
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 rounded-lg"></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
                   </div>
                 </div>
               </div>
@@ -462,20 +503,36 @@ const Ludo = () => {
             {/* 7 */}
             <div
               id="block-one"
-              className="  col-span-2 row-span-2 h-full w-full"
+              className=" col-span-2 row-span-2 bg-blue-200  p-2 m:p-3 md:p-4 md:rounded-lg sm:rounded-md rounded-sm  h-full w-full"
             >
-              <div className="grid grid-cols-4 grid-rows-4 h-full gap-0.5 w-full ">
-                <div className="h-full w-full col-span-2 rounded-lg  row-span-2 bg-blue-500 flex justify-center items-center">
-                  <div className="rounded-lg h-[60%] w-[60%] bg-neutral-200 border-2 border-neutral-900"></div>
+              <div className="grid grid-cols-4 grid-rows-4 h-full w-full ">
+                <div className="h-full w-full rounded-tl-xl rounded-br-xl md:rounded-tl-3xl md:rounded-br-3xl col-span-2    row-span-2 bg-blue-500 flex justify-center items-center">
+                  <div className="rounded-3xl  h-[70%] w-[70%] flex justify-center items-center bg-blue-200 border border-neutral-900">
+                    <div className="text-3xl sm:text-5xl md:text-5xl font-extrabold">
+                      1
+                    </div>
+                  </div>
                 </div>
-                <div className="h-full w-full col-span-2 rounded-lg row-span-2 bg-blue-500 flex justify-center items-center">
-                  <div className="rounded-lg h-[60%] w-[60%] bg-neutral-200 border-2 border-neutral-900"></div>
+                <div className="h-full w-full rounded-tr-xl rounded-bl-xl md:rounded-tr-3xl md:rounded-bl-3xl col-span-2   row-span-2 bg-blue-500 flex justify-center items-center">
+                  <div className="rounded-3xl  h-[70%] w-[70%] flex justify-center items-center bg-blue-200 border border-neutral-900">
+                    <div className="text-3xl sm:text-5xl md:text-5xl font-extrabold">
+                      2
+                    </div>
+                  </div>
                 </div>
-                <div className="h-full w-full col-span-2 rounded-lg row-span-2 bg-blue-500 flex justify-center items-center">
-                  <div className="rounded-lg h-[60%] w-[60%] bg-neutral-200 border-2 border-neutral-900"></div>
+                <div className="h-full w-full rounded-bl-xl rounded-tr-xl md:rounded-bl-3xl md:rounded-tr-3xl col-span-2   row-span-2 bg-blue-500 flex justify-center items-center">
+                  <div className="rounded-3xl  h-[70%] w-[70%] flex justify-center items-center bg-blue-200 border border-neutral-900">
+                    <div className="text-3xl sm:text-5xl md:text-5xl font-extrabold">
+                      3
+                    </div>
+                  </div>
                 </div>
-                <div className="h-full w-full col-span-2 rounded-lg row-span-2 bg-blue-500 flex justify-center items-center">
-                  <div className="rounded-lg h-[60%] w-[60%] bg-neutral-200 border-2 border-neutral-900"></div>
+                <div className="h-full w-full rounded-br-xl rounded-tl-xl md:rounded-br-3xl md:rounded-tl-3xl col-span-2   row-span-2 bg-blue-500 flex justify-center items-center">
+                  <div className="rounded-3xl  h-[70%] w-[70%] flex justify-center items-center bg-blue-200 border border-neutral-900">
+                    <div className="text-3xl sm:text-5xl md:text-5xl font-extrabold">
+                      4
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -484,7 +541,7 @@ const Ludo = () => {
               <div className="grid    grid-cols-1 grid-rows-2 h-full gap-0.5 w-full">
                 <div className="h-full w-full col-span-1 row-span-1   ">
                   <div className="grid grid-cols-3 grid-rows-3 h-full w-full gap-0.5  ">
-                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -497,12 +554,12 @@ const Ludo = () => {
                         />
                       </svg>
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-500 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-500 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 rounded-lg flex justify-center items-center">
-                    <svg
+                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-500 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-500 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
+                      <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
                         className="w-10 h-10  "
@@ -513,9 +570,8 @@ const Ludo = () => {
                           clipRule="evenodd"
                         />
                       </svg>
-                   
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -528,15 +584,15 @@ const Ludo = () => {
                         />
                       </svg>
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-500 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 rounded-lg"></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-500 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
                   </div>
                 </div>
                 <div className="h-full w-full col-span-1 row-span-1  ">
                   <div className="grid grid-cols-3 grid-rows-3 h-full w-full gap-0.5 ">
-                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-500 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-red-500 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-500 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-red-500 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -549,7 +605,7 @@ const Ludo = () => {
                         />
                       </svg>
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-500 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-500 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -559,10 +615,10 @@ const Ludo = () => {
                         <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
                       </svg>
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-500 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 rounded-lg"></div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 rounded-lg flex justify-center items-center">
+                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-500 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-blue-200 md:rounded-lg sm:rounded-md rounded-sm   flex justify-center items-center">
                       <svg
                         viewBox="0 0 24 24"
                         fill="currentColor"
@@ -575,7 +631,7 @@ const Ludo = () => {
                         />
                       </svg>
                     </div>
-                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 rounded-lg"></div>
+                    <div className="col-span-1 row-span-1 h-full w-full bg-red-200 md:rounded-lg sm:rounded-md rounded-sm  "></div>
                   </div>
                 </div>
               </div>
@@ -583,27 +639,54 @@ const Ludo = () => {
             {/* 9 */}
             <div
               id="block-one"
-              className=" col-span-2 row-span-2 h-full w-full"
+              className=" col-span-2 row-span-2 bg-red-200  p-2 m:p-3 md:p-4 md:rounded-lg sm:rounded-md rounded-sm  h-full w-full"
             >
-              <div className="grid grid-cols-4 grid-rows-4 h-full gap-0.5 w-full ">
-                <div className="h-full w-full col-span-2 rounded-lg  row-span-2 bg-red-500 flex justify-center items-center">
-                  <div className="rounded-lg h-[60%] w-[60%] bg-neutral-200 border-2 border-neutral-900"></div>
+              <div className="grid grid-cols-4 grid-rows-4 h-full w-full ">
+                <div className="h-full w-full rounded-tl-xl rounded-br-xl md:rounded-tl-3xl md:rounded-br-3xl col-span-2    row-span-2 bg-red-500 flex justify-center items-center">
+                  <div className="rounded-3xl  h-[70%] w-[70%] flex justify-center items-center bg-red-200 border border-neutral-900">
+                    <div className="text-3xl sm:text-5xl md:text-5xl font-extrabold">
+                      1
+                    </div>
+                  </div>
                 </div>
-                <div className="h-full w-full col-span-2 rounded-lg row-span-2 bg-red-500 flex justify-center items-center">
-                  <div className="rounded-lg h-[60%] w-[60%] bg-neutral-200 border-2 border-neutral-900"></div>
+                <div className="h-full w-full rounded-tr-xl rounded-bl-xl md:rounded-tr-3xl md:rounded-bl-3xl col-span-2   row-span-2 bg-red-500 flex justify-center items-center">
+                  <div className="rounded-3xl  h-[70%] w-[70%] flex justify-center items-center bg-red-200 border border-neutral-900">
+                    <div className="text-3xl sm:text-5xl md:text-5xl font-extrabold">
+                      2
+                    </div>
+                  </div>
                 </div>
-                <div className="h-full w-full col-span-2 rounded-lg row-span-2 bg-red-500 flex justify-center items-center">
-                  <div className="rounded-lg h-[60%] w-[60%] bg-neutral-200 border-2 border-neutral-900"></div>
+                <div className="h-full w-full rounded-bl-xl rounded-tr-xl md:rounded-bl-3xl md:rounded-tr-3xl col-span-2   row-span-2 bg-red-500 flex justify-center items-center">
+                  <div className="rounded-3xl  h-[70%] w-[70%] flex justify-center items-center bg-red-200 border border-neutral-900">
+                    <div className="text-3xl sm:text-5xl md:text-5xl font-extrabold">
+                      3
+                    </div>
+                  </div>
                 </div>
-                <div className="h-full w-full col-span-2 rounded-lg row-span-2 bg-red-500 flex justify-center items-center">
-                  <div className="rounded-lg h-[60%] w-[60%] bg-neutral-200 border-2 border-neutral-900"></div>
+                <div className="h-full w-full rounded-br-xl rounded-tl-xl md:rounded-br-3xl md:rounded-tl-3xl col-span-2   row-span-2 bg-red-500 flex justify-center items-center">
+                  <div className="rounded-3xl  h-[70%] w-[70%] flex justify-center items-center bg-red-200 border border-neutral-900">
+                    <div className="text-3xl sm:text-5xl md:text-5xl font-extrabold">
+                      4
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </main>
       </div>
-      <div className="flex-1 bg-neutral-950"></div>
+      <div className=" bg-neutral-950">
+        <div className="w-[100vw] sm:w-[100vw] md:w-[10vw] lg:w-[15vw] h-[20vw] sm:h-[10vw] p-0.5 md:px-1 md:h-[100vh] grid grid-cols-5 grid-rows-1 md:grid-cols-1 sm:grid-cols-5 sm:grid-rows-1 gap-0.5 md:grid-rows-5">
+          {/* player 3 */}
+          <div className="h-full w-full col-span-2 row-span-1 md:col-span-1 md:row-span-2  bg-green-500 rounded-sm sm:rounded-md md:rounded-lg "></div>
+          <div className="h-full w-full col-span-1 row-span-1 bg-neutral-900 rounded-sm sm:rounded-md md:rounded-lg "></div>
+          {/* player 4 */}
+          <div className="h-full w-full col-span-2 row-span-1 md:col-span-1 md:row-span-2  bg-red-500 rounded-sm sm:rounded-md md:rounded-lg "></div>
+        </div>
+      </div>
+      <div className="flex-1">
+        <div className="h-full w-full bg-neutral-900 rounded-sm"></div>
+      </div>
     </div>
   );
 };
